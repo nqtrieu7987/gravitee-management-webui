@@ -69,6 +69,10 @@ class ApplicationService {
     return this.$http.delete(this.applicationsURL + application.id);
   }
 
+  search(query) {
+    return this.$http.get(this.applicationsURL + "?query=" + query);
+  }
+
   // Plans
 
   subscribe(applicationId, planId) {
